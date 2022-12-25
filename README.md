@@ -11,43 +11,54 @@ This project is focused on analyzing the team statistics of the Cleveland Browns
 
 # Executive Summary 
 * In this dataset Browns lose more games than they win
-* 3 Models were created, Best model performs 30% better than baseline model 
-* drivers of target variable : region, product, retailer and sale method 
-* Recommend shifting some inventory from walmart to better performing retailers
+* 4 Models were created, Best model performs 42% better than the baseline model 
+* drivers of target variable : two hundred yards gained, under 300 total yards allowed and less than two turnovers 
+* The browns should game plan to rush for more than 200 yards per game, allow less than 300 total yards on defense and turn the ball over less than two times each game 
 
 # Initial Thoughts
-The retailer would be the most important driver of predicting operating margin 
+The browns rushing yards, turnovers and amount of yard given up by the defense per game would contribute to the outcome of the game. 
 
 # The Plan
-* Acquire data from data.world at this specific url https://data.world/stellabigail/adidas-us-sales-datasets
+* Data Acquisition
+    * This data was acquired on Dec 21 from https://www.pro-football-reference.com/teams/cle/2022.htm
+    * Download the Schedule & Game Results for the 2019, 2020, 2021 and 2022 season 
+    * Combine the data of the seasons downloaded into one document to read into jupyter notebook
+
  
 * Prepare data
    * Deleted top row of excel sheet 
    * Dropped columns 
-        * Invoice Date 
-        * unnamed column
-        * operating profit
-        * reetailer id 
-        * total sales 
-        * price per unit 
+        * Week
+        * Day
+        * Date
+        * Unnamed: 3  
+        * Unnamed: 4
+        * OT 
+        * Rec
+    * Remove the bye weeks from each season 
+    * Remove the last three columns of the excel sheet
+    * Renamed columns to more readable names 
     * Performed get dummies on region, retailer, product and sales method columns 
-    * replaced spaces with underscores and made all words lower case
+    * Replaced spaces with underscores and made all words lower case
+    * Convert all numerical columns to integer data types 
 
  
-* Explore data in search of drivers of operating margin
+* Explore data in search of drivers of game result
    * Answer the following initial questions
-       * What are the median and mean operating margin
-       * What is the mean home price?
-       * Does region have a relationship with operating margin?
-       * Does product have a relationship with operating margin?
-       * Does retailer have a relationship with operarting margin?
-       * Is there a relationship between operating margin and sales method?
+       * What is the mode of the result?
+       * Have the Browns won more games at home or away? 
+       * Is there a significant difference in the mean of rush yards in games resulting in wins compared to all games?
+       * Is there a significant difference in the mean of turnovers in games resulting in wins compared to all games?
+       * Is there a significant difference in the mean between rushing for more than 200 yards in games resulting in wins compared to all games?
+       * Is there a significant difference in the mean of games where total yards allowed is less than 300 yards compared to all games?
+       * Is there a significant difference in the mean of games where turnovers are less than 2 compared to all games? 
+
       
 * Develop a Model to predict an accurate value of the operating margin
    * Use drivers supported by statistical test results to build predictive models
    * Evaluate all models on train 
    * Evaluate top models on validate data 
-   * Select the best model based on lowest Root Mean Squared Error
+   * Select the best model based on best accuracy with awareness of over fitting
    * Evaluate the best model on test data
  
 * Draw conclusions
@@ -56,19 +67,21 @@ The retailer would be the most important driver of predicting operating margin
 
 | Feature | Definition |
 |:--------|:-----------|
-|Retailer| Specific store: Amazon, Foot Locker, Kohl's, Sports Direct, Walmart, West Gear|
-|Region| Geographic Region in United States: Northeast, Midwest South, Southeast, West |
-|Product| Products sold by retailer: men and women's footwear and apparel|
-|Operating Margin| operating income/revenue|
-|Sales Method | The method of sale: In Store, Online and Outlet |
+|Result| outcome of the game: W (win) or L(loss)|
+|Location| Where is the game played: home (at brown's stadium) or away(not brown's staidum)|
+|Two Hundred Yards Gained| Number of Yards Rushed For: 1 (Browns rushed for more than 200 yards in a win), 0 (Browns did not rush for more than 200 yards in a win) |
+|Under 300 Total Yards Allowed| Browns Defense allowed less than 300 total yards: 1 (Browns defense gave up less than 300 Total Yards Allowed), 0 (Browns did not rush for more than 200 yards in a win)|
+|Less than Two Turnovers| Number of Games with Less than Two Turnovers: 1 (Browns had less than two turnovers in a game Won),  (Browns did not have less than two turnovers in a game Won)|
 
 # Steps to Reproduce
 1) Clone this repo
-2) Acquire the data from data.world
-3) Delete rows 1 - 4 of the excel document
-4) Put the data in the file containing the cloned repo
-4) Run notebook
- 
+2) Acquire the data from https://www.pro-football-reference.com/teams/cle/2022.htm
+3) Create one consolidated excel document of data
+4) Delete top row of excel sheet
+5) Remove the last three columns of the excel sheet
+6) Run notebook
+
+
 # Takeaways and Conclusions
 - Operating margin has a relationship with region,retailer,sale method and product 
 - Women's apparel and men's street footwear appear to have the highest profit margins
