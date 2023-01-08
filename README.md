@@ -75,7 +75,9 @@ The browns rushing yards, turnovers and total yards given up by the brown's defe
     * The total yards allowed did not have an association with the result of the game 
 
 * Modeling Summary
-
+    * The features used for modeling were rushing yards gained and turnovers forced
+    * The final model performed 4% better than the baseline model at predicting the result of the game
+    * I would not recommend this model for production
 * Recommendations
     * I would recommend the browns center their offensive strategy on rushing the ball
     * The defense should focus their strategy on playing aggressive and creating turnovers and not on how many yards they give up
