@@ -1,4 +1,7 @@
 # Predicting Outcome of Browns Football Game
+
+# Canva Presentation 
+https://www.canva.com/design/DAFU3i4aU_8/bs4Cl8iWVAQgkbjWv7d6NA/view?utm_content=DAFU3i4aU_8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
  
 # Project Description
 The purpose of this project is to explore the game statistics of Browns football games and come up with recommendations for the best strategy for them to win a game. I will also create a model that can accurately predict the outcome of the game. 
