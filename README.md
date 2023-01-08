@@ -19,8 +19,8 @@ The purpose of this project is to explore the game statistics of Browns football
 
 | Feature | Definition |
 |:--------|:-----------|
-|Result| outcome of the game: W (win) or L(loss)|
-|Location| home for games played at browns stadium, away for all others|
+|result| outcome of the game: W (win) or L(loss)|
+|location| home for games played at browns stadium, away for all others|
 |rush_yards_gained| rushing yards achieved by browns offense |
 |total_yards_allowed| total yards browns defense allowed other team's offense to achieve |
 |turnovers forced| number of turnovers created by browns defense|
