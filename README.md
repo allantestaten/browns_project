@@ -67,6 +67,23 @@ The browns rushing yards, turnovers and total yards given up by the brown's defe
    * Evaluate the best model on test data
  
 * Draw conclusions
+* Summary
+    * Browns lose more games than they win 
+    * Browns win more games at home then away 
+    * The significant features identified during exploration were rushing yards and forced turnovers
+    * The location of the game did not have an association with the result of the game 
+    * The total yards allowed did not have an association with the result of the game 
+
+* Modeling Summary
+
+* Recommendations
+    * I would recommend the browns center their offensive strategy on rushing the ball
+    * The defense should focus their strategy on playing aggressive and creating turnovers and not on how many yards they give up
+
+* Next Steps
+    * Explore if there is an association between passing yards gained and game result
+    * Find out if there is a relationship between points allowed by the Browns and the outcome of the game
+    * Explore more features to combine with rushing yards gained and turnovers forced to find out if that creates a better model
 
 
 # Steps to Reproduce
@@ -78,18 +95,3 @@ The browns rushing yards, turnovers and total yards given up by the brown's defe
 6) Run notebook
 
 
-# Takeaways and Conclusions
-- Operating margin has a relationship with region,retailer,sale method and product 
-- Women's apparel and men's street footwear appear to have the highest profit margins
-- Online Sales appears to have the highest operating margin 
-- The retailer with the highest operating margin is sports direct
-- Walmart appears to be underperforming relative to its peers
-- South region has the highest operating margin 
-- Operating Margin has few outliers considering the difference median and mean are approximately 1% 
-
-# Recommendations
-* Provide Walmart less inventory and shift inventory to better performing retailer
-* The sales department reach out to the retailer sports direct to find out if they are opening more locations
-
-# Next Steps
-* Research if data supports decreasing the number of stores in certain cities or states based on how much of their operating margin comes from online sales  
