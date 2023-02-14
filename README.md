@@ -1,5 +1,6 @@
 # Predicting Outcome of Browns Football Game
- 
+ ![](https://github.com/browns_project/browns.gif)
+
 # Project Description
 The purpose of this project is to explore the game statistics of Browns football games and come up with recommendations for the best strategy for them to win a game. I will also create a model that can accurately predict the outcome of the game. 
  
